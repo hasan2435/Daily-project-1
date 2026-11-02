@@ -1,14 +1,36 @@
-# Daily Project 1 - Pomodoro Timer
+# Daily Project 1
+
+Seri ini: satu proyek kecil baru setiap hari, bebas topik, yang penting konsisten upload.
+Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijalankan di terminal/VSCode.
+
+## Daftar proyek
+
+- Day 1 — Pomodoro Timer: timer Pomodoro di terminal (`pomodoro.py`).
+- Day 2 — Pencatat Pengeluaran Harian: catat pengeluaran dan lihat totalnya (`day-02/pengeluaran.py`).
+
+## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
 
-## Jalankan
 ```bash
 python3 pomodoro.py
 python3 pomodoro.py 15 3
 ```
 
 Default: 25 menit fokus, 5 menit istirahat, 4 putaran.
-Hanya Python standar, tanpa library tambahan. Tekan Ctrl+C untuk berhenti.
+Tekan Ctrl+C untuk berhenti.
 
-Seri ini: satu proyek kecil baru setiap hari, bebas topik, yang penting konsisten upload.
+## Day 2 — Pencatat Pengeluaran Harian
+
+Proyek harian ke-2: program terminal untuk mencatat pengeluaran dan melihat totalnya, baik total keseluruhan maupun per kategori.
+
+```bash
+cd day-02
+python3 pengeluaran.py
+python3 pengeluaran.py tambah 50000 makan "Makan siang"
+python3 pengeluaran.py daftar
+python3 pengeluaran.py total
+```
+
+Data disimpan di berkas `pengeluaran.json` pada folder tempat program dijalankan. Berkas data itu milik pengguna, bukan bagian dari proyek, jadi jangan ikut diunggah ke repositori.
+Detail lengkap ada di `day-02/README.md`.
