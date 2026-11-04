@@ -8,6 +8,7 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 - Day 1 — Pomodoro Timer: timer Pomodoro di terminal (`pomodoro.py`).
 - Day 2 — Pencatat Pengeluaran Harian: catat pengeluaran dan lihat totalnya (`day-02/pengeluaran.py`).
 - Day 3 — Penghitung Kata dan Waktu Baca: analisis teks, hitung kata dan perkiraan waktu baca (`day-03/kata.py`).
+- Day 4 — Generator Kata Sandi Aman: buat kata sandi acak yang kuat dan nilai kekuatannya (`day-04/password.py`).
 
 ## Day 1 — Pomodoro Timer
 
@@ -51,3 +52,19 @@ python3 kata.py --teks "Belajar setiap hari, sedikit demi sedikit, tapi konsiste
 
 Jalankan tanpa argumen untuk mode interaktif.
 Detail lengkap ada di `day-03/README.md`.
+
+## Day 4 — Generator Kata Sandi Aman
+
+Proyek harian ke-4: program terminal untuk membuat kata sandi acak
+yang kuat (modul `secrets` dari pustaka standar Python) dan menilai
+kekuatan kata sandi yang sudah ada dengan skor 0–100.
+
+```bash
+cd day-04
+python3 password.py
+python3 password.py --panjang 20 --jumlah 5
+python3 password.py --nilai "KataSandi123!"
+```
+
+Secara default program membuat 1 kata sandi sepanjang 16 karakter.
+Detail lengkap ada di `day-04/README.md`.
