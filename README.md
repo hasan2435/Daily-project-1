@@ -9,6 +9,7 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 - Day 2 — Pencatat Pengeluaran Harian: catat pengeluaran dan lihat totalnya (`day-02/pengeluaran.py`).
 - Day 3 — Penghitung Kata dan Waktu Baca: analisis teks, hitung kata dan perkiraan waktu baca (`day-03/kata.py`).
 - Day 4 — Generator Kata Sandi Aman: buat kata sandi acak yang kuat dan nilai kekuatannya (`day-04/password.py`).
+- Day 5 — Kalkulator Tanggal: selisih tanggal, geser hari, nama hari, dan hitung menuju ulang tahun (`day-05/tanggal.py`).
 
 ## Day 1 — Pomodoro Timer
 
@@ -68,3 +69,22 @@ python3 password.py --nilai "KataSandi123!"
 
 Secara default program membuat 1 kata sandi sepanjang 16 karakter.
 Detail lengkap ada di `day-04/README.md`.
+
+## Day 5 — Kalkulator Tanggal
+
+Proyek harian ke-5: program terminal untuk menghitung selisih dua
+tanggal (termasuk jumlah hari kerja Senin-Jumat), menggeser tanggal
+maju/mundur sejumlah hari, mencari nama hari dari tanggal, dan
+menghitung usia serta hari menuju ulang tahun berikut.
+
+```bash
+cd day-05
+python3 tanggal.py
+python3 tanggal.py selisih 2026-11-05 2026-12-25
+python3 tanggal.py tambah 2026-11-05 10 --kerja
+python3 tanggal.py hari 2026-11-05
+python3 tanggal.py ultah 2000-01-15
+```
+
+Jalankan tanpa argumen untuk mode interaktif.
+Detail lengkap ada di `day-05/README.md`.
