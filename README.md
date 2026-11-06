@@ -10,6 +10,7 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 - Day 3 — Penghitung Kata dan Waktu Baca: analisis teks, hitung kata dan perkiraan waktu baca (`day-03/kata.py`).
 - Day 4 — Generator Kata Sandi Aman: buat kata sandi acak yang kuat dan nilai kekuatannya (`day-04/password.py`).
 - Day 5 — Kalkulator Tanggal: selisih tanggal, geser hari, nama hari, dan hitung menuju ulang tahun (`day-05/tanggal.py`).
+- Day 6 — Kalkulator Bunga Majemuk: simulasi tabungan dengan bunga majemuk, hitung nilai akhir, lama menuju target, dan setoran bulanan (`day-06/bunga.py`).
 
 ## Day 1 — Pomodoro Timer
 
@@ -88,3 +89,23 @@ python3 tanggal.py ultah 2000-01-15
 
 Jalankan tanpa argumen untuk mode interaktif.
 Detail lengkap ada di `day-05/README.md`.
+
+## Day 6 — Kalkulator Bunga Majemuk
+
+Proyek harian ke-6: program terminal untuk mensimulasikan pertumbuhan
+tabungan dengan bunga majemuk dan setoran rutin bulanan: hitung nilai
+akhir, lama menuju target dana, setoran bulanan yang dibutuhkan, dan
+tabel pertumbuhan tahunan.
+
+```bash
+cd day-06
+python3 bunga.py
+python3 bunga.py tumbuh --pokok 1000000 --bunga 6 --tahun 5 --setoran 500000
+python3 bunga.py target --pokok 1000000 --bunga 6 --setoran 500000 --target 50000000
+python3 bunga.py setoran --pokok 1000000 --bunga 6 --tahun 5 --target 50000000
+python3 bunga.py tabel --pokok 1000000 --bunga 6 --tahun 5 --setoran 500000
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Bunga dihitung majemuk
+per bulan, setoran masuk di akhir bulan.
+Detail lengkap ada di `day-06/README.md`.
