@@ -11,6 +11,7 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 - Day 4 — Generator Kata Sandi Aman: buat kata sandi acak yang kuat dan nilai kekuatannya (`day-04/password.py`).
 - Day 5 — Kalkulator Tanggal: selisih tanggal, geser hari, nama hari, dan hitung menuju ulang tahun (`day-05/tanggal.py`).
 - Day 6 — Kalkulator Bunga Majemuk: simulasi tabungan dengan bunga majemuk, hitung nilai akhir, lama menuju target, dan setoran bulanan (`day-06/bunga.py`).
+- Day 7 — Permainan Tebak Kata: tebak kata Bahasa Indonesia huruf demi huruf, 6 kategori dan 3 tingkat kesulitan (`day-07/tebak.py`).
 
 ## Day 1 — Pomodoro Timer
 
@@ -109,3 +110,21 @@ python3 bunga.py tabel --pokok 1000000 --bunga 6 --tahun 5 --setoran 500000
 Jalankan tanpa argumen untuk mode interaktif. Bunga dihitung majemuk
 per bulan, setoran masuk di akhir bulan.
 Detail lengkap ada di `day-06/README.md`.
+
+## Day 7 — Permainan Tebak Kata
+
+Proyek harian ke-7: permainan tebak kata di terminal. Tebak kata Bahasa
+Indonesia huruf demi huruf sebelum gambar orang-orangan selesai. Ada
+6 kategori kata (hewan, buah, kota, benda, makanan, profesi) dan
+3 tingkat kesulitan yang mengatur panjang kata dan jumlah nyawa.
+
+```bash
+cd day-07
+python3 tebak.py
+python3 tebak.py --kategori hewan --kesulitan sulit
+python3 tebak.py --kata kucing
+python3 tebak.py --daftar
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Menebak kata utuh yang
+salah mengurangi 2 nyawa. Detail lengkap ada di `day-07/README.md`.
