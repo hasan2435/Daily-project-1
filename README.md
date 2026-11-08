@@ -13,6 +13,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 - Day 6 — Kalkulator Bunga Majemuk: simulasi tabungan dengan bunga majemuk, hitung nilai akhir, lama menuju target, dan setoran bulanan (`day-06/bunga.py`).
 - Day 7 — Permainan Tebak Kata: tebak kata Bahasa Indonesia huruf demi huruf, 6 kategori dan 3 tingkat kesulitan (`day-07/tebak.py`).
 
+- Day 8 — Konverter Satuan: ubah satuan panjang, berat, volume, suhu, waktu, kecepatan, dan data (`day-08/konversi.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -128,3 +130,24 @@ python3 tebak.py --daftar
 
 Jalankan tanpa argumen untuk mode interaktif. Menebak kata utuh yang
 salah mengurangi 2 nyawa. Detail lengkap ada di `day-07/README.md`.
+
+
+## Day 8 — Konverter Satuan
+
+Proyek harian ke-8: program terminal untuk mengubah satuan dalam 7
+kategori: panjang, berat, volume, suhu, waktu, kecepatan, dan data.
+Suhu dihitung lewat Celsius, termasuk Reamur; data memakai kelipatan
+1024, dari bit sampai TB.
+
+```bash
+cd day-08
+python3 konversi.py
+python3 konversi.py panjang 5 km m
+python3 konversi.py suhu 100 C F
+python3 konversi.py berat 2.5 kg ons
+python3 konversi.py data 1 GB MB
+python3 konversi.py --daftar
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Detail lengkap ada di
+`day-08/README.md`.
