@@ -15,6 +15,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 8 — Konverter Satuan: ubah satuan panjang, berat, volume, suhu, waktu, kecepatan, dan data (`day-08/konversi.py`).
 
+- Day 9 — Kalkulator BMI & Kalori Harian: hitung BMI, BMR, TDEE, dan target kalori harian (`day-09/bmi.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -151,3 +153,23 @@ python3 konversi.py --daftar
 
 Jalankan tanpa argumen untuk mode interaktif. Detail lengkap ada di
 `day-08/README.md`.
+
+## Day 9 — Kalkulator BMI & Kalori Harian
+
+Proyek harian ke-9: program terminal untuk menghitung BMI beserta
+kategorinya dan rentang berat badan ideal, lalu kebutuhan kalori:
+BMR dengan rumus Mifflin-St Jeor, TDEE berdasarkan tingkat aktivitas,
+dan target kalori untuk menurunkan, mempertahankan, atau menaikkan
+berat badan sekitar 0,5 kg per minggu.
+
+```bash
+cd day-09
+python3 bmi.py
+python3 bmi.py bmi 70 170
+python3 bmi.py kalori 70 170 30 pria sedang
+python3 bmi.py kalori 55 160 25 wanita ringan --tujuan turun
+python3 bmi.py --daftar
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Detail lengkap ada di
+`day-09/README.md`.
