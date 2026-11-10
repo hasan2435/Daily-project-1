@@ -17,6 +17,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 9 — Kalkulator BMI & Kalori Harian: hitung BMI, BMR, TDEE, dan target kalori harian (`day-09/bmi.py`).
 
+- Day 10 — Pencatat Kebiasaan Harian: catat kebiasaan, centang harian, streak, dan ringkasan 7 hari terakhir (`day-10/kebiasaan.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -173,3 +175,24 @@ python3 bmi.py --daftar
 
 Jalankan tanpa argumen untuk mode interaktif. Detail lengkap ada di
 `day-09/README.md`.
+
+## Day 10 — Pencatat Kebiasaan Harian
+
+Proyek harian ke-10: program terminal untuk mencatat kebiasaan yang
+ingin dibangun setiap hari: tambah kebiasaan dengan target mingguan,
+centang bila sudah dilakukan, dan pantau streak (rangkaian hari
+beruntun) beserta ringkasan 7 hari terakhir.
+
+```bash
+cd day-10
+python3 kebiasaan.py
+python3 kebiasaan.py tambah "Olahraga pagi" --target 5
+python3 kebiasaan.py centang "Olahraga pagi"
+python3 kebiasaan.py daftar
+python3 kebiasaan.py ringkasan
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Data disimpan di
+`kebiasaan.json` pada folder tempat program dijalankan; berkas data
+itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
+`day-10/README.md`.
