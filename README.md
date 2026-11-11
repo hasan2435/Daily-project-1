@@ -19,6 +19,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 10 — Pencatat Kebiasaan Harian: catat kebiasaan, centang harian, streak, dan ringkasan 7 hari terakhir (`day-10/kebiasaan.py`).
 
+- Day 11 — Kalkulator Waktu Tidur: hitung jam tidur dan jam bangun ideal dari siklus tidur 90 menit (`day-11/tidur.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -196,3 +198,26 @@ Jalankan tanpa argumen untuk mode interaktif. Data disimpan di
 `kebiasaan.json` pada folder tempat program dijalankan; berkas data
 itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
 `day-10/README.md`.
+
+## Day 11 — Kalkulator Waktu Tidur
+
+Proyek harian ke-11: program terminal untuk menghitung jam tidur dan
+jam bangun yang ideal berdasarkan siklus tidur 90 menit. Satu siklus
+tidur berlangsung sekitar 90 menit; orang dewasa umumnya butuh 5-6
+siklus (7,5-9 jam) per malam. Program menghitung mundur dari jam
+bangun yang diinginkan atau maju dari jam tidur, dengan
+memperhitungkan waktu yang dibutuhkan untuk tertidur (default
+15 menit).
+
+```bash
+cd day-11
+python3 tidur.py
+python3 tidur.py bangun 06:00
+python3 tidur.py tidur 23:00
+python3 tidur.py sekarang
+python3 tidur.py durasi 23:00 06:00
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Opsi `--tertidur`
+mengatur waktu yang dibutuhkan untuk tertidur (0-60 menit, default
+15). Detail lengkap ada di `day-11/README.md`.
