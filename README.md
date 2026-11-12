@@ -21,6 +21,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 11 — Kalkulator Waktu Tidur: hitung jam tidur dan jam bangun ideal dari siklus tidur 90 menit (`day-11/tidur.py`).
 
+- Day 12 — Pembagi Tagihan: bagi tagihan makan bersama secara rata, per item pesanan, atau menurut persen, dengan service charge, tip, dan pembulatan (`day-12/tagihan.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -221,3 +223,24 @@ python3 tidur.py durasi 23:00 06:00
 Jalankan tanpa argumen untuk mode interaktif. Opsi `--tertidur`
 mengatur waktu yang dibutuhkan untuk tertidur (0-60 menit, default
 15). Detail lengkap ada di `day-11/README.md`.
+
+## Day 12 — Pembagi Tagihan
+
+Proyek harian ke-12: program terminal untuk membagi tagihan makan
+bersama dengan adil: bagi rata, bagi per item pesanan, atau bagi
+menurut persentase yang disepakati. Bisa ditambah service charge dan
+tip (tip dihitung dari total awal + service charge), serta
+membulatkan bagian tiap orang ke kelipatan tertentu supaya mudah
+ditransfer.
+
+```bash
+cd day-12
+python3 tagihan.py
+python3 tagihan.py rata 300000 3 --service 10 --tip 5
+python3 tagihan.py rata 275000 4 --bulat 1000
+python3 tagihan.py persen 400000 --bagi "Ani=50, Budi=30, Cici=20"
+python3 tagihan.py item
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Detail lengkap ada di
+`day-12/README.md`.
