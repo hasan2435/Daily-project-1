@@ -23,6 +23,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 12 — Pembagi Tagihan: bagi tagihan makan bersama secara rata, per item pesanan, atau menurut persen, dengan service charge, tip, dan pembulatan (`day-12/tagihan.py`).
 
+- Day 13 — Kalkulator IPK & Nilai Kuliah: hitung IPK tertimbang SKS dari nilai huruf atau angka 0-100, lengkap dengan predikat dan target IPK semester depan (`day-13/ipk.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -244,3 +246,30 @@ python3 tagihan.py item
 
 Jalankan tanpa argumen untuk mode interaktif. Detail lengkap ada di
 `day-12/README.md`.
+
+## Day 13 — Kalkulator IPK & Nilai Kuliah
+
+Proyek harian ke-13: program terminal untuk menghitung IPK dari mata
+kuliah yang diambil: tiap mata kuliah punya jumlah SKS dan nilai huruf
+(A sampai E) atau angka 0-100 yang otomatis dikonversi ke huruf.
+IPK dihitung tertimbang SKS, lengkap dengan predikat kelulusan dan
+perhitungan IPK semester depan yang dibutuhkan untuk mencapai target
+IPK kumulatif.
+
+```bash
+cd day-13
+python3 ipk.py
+python3 ipk.py tambah "Matematika Diskrit" 3 A
+python3 ipk.py tambah "Fisika Dasar" 2 85
+python3 ipk.py daftar
+python3 ipk.py ipk
+python3 ipk.py target 3.5 20
+python3 ipk.py konversi 82
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Data disimpan di
+`ipk.json` pada folder tempat program dijalankan; berkas data itu
+milik pengguna, bukan bagian dari proyek. Skala konversi angka ke
+huruf: A 85-100, AB 80-84, B 75-79, BC 70-74, C 60-69, D 50-59,
+E 0-49 (cek aturan kampusmu, skala tiap kampus bisa berbeda).
+Detail lengkap ada di `day-13/README.md`.
