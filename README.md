@@ -25,6 +25,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 13 — Kalkulator IPK & Nilai Kuliah: hitung IPK tertimbang SKS dari nilai huruf atau angka 0-100, lengkap dengan predikat dan target IPK semester depan (`day-13/ipk.py`).
 
+- Day 14 — Kuis Pengetahuan Umum: kuis pilihan ganda Bahasa Indonesia, 5 kategori dan 40 soal, soal dan pilihan diacak, skor terbaik tersimpan (`day-14/kuis.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -273,3 +275,27 @@ milik pengguna, bukan bagian dari proyek. Skala konversi angka ke
 huruf: A 85-100, AB 80-84, B 75-79, BC 70-74, C 60-69, D 50-59,
 E 0-49 (cek aturan kampusmu, skala tiap kampus bisa berbeda).
 Detail lengkap ada di `day-13/README.md`.
+
+## Day 14 — Kuis Pengetahuan Umum
+
+Proyek harian ke-14: kuis pilihan ganda Bahasa Indonesia di terminal.
+Ada 5 kategori — pengetahuan umum, sains, sejarah, geografi, dan
+olahraga — masing-masing 8 soal, total 40 soal. Soal dan urutan
+pilihan jawaban diacak setiap permainan, tiap jawaban langsung
+diberi penjelasan singkat, dan skor terbaik per kategori disimpan
+supaya bisa dipecahkan di permainan berikutnya.
+
+```bash
+cd day-14
+python3 kuis.py
+python3 kuis.py --kategori sains --jumlah 5
+python3 kuis.py --kategori campuran --jumlah 10
+python3 kuis.py --daftar
+python3 kuis.py skor
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Tiap jawaban benar
+bernilai 10 poin; predikat dihitung dari persentase jawaban benar.
+Skor terbaik disimpan di `kuis.json` pada folder tempat program
+dijalankan; berkas data itu milik pengguna, bukan bagian dari
+proyek. Detail lengkap ada di `day-14/README.md`.
