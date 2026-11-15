@@ -27,6 +27,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 14 — Kuis Pengetahuan Umum: kuis pilihan ganda Bahasa Indonesia, 5 kategori dan 40 soal, soal dan pilihan diacak, skor terbaik tersimpan (`day-14/kuis.py`).
 
+- Day 15 — Daftar Tugas (To-Do List): catat tugas dengan prioritas, tenggat, tag, dan catatan; tandai selesai dan pantau tugas yang terlambat (`day-15/todo.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -299,3 +301,31 @@ bernilai 10 poin; predikat dihitung dari persentase jawaban benar.
 Skor terbaik disimpan di `kuis.json` pada folder tempat program
 dijalankan; berkas data itu milik pengguna, bukan bagian dari
 proyek. Detail lengkap ada di `day-14/README.md`.
+
+## Day 15 — Daftar Tugas (To-Do List)
+
+Proyek harian ke-15: daftar tugas di terminal dengan prioritas,
+tenggat, tag, dan catatan. Tugas bisa ditambah, dilihat, ditandai
+selesai, diedit, dihapus, dicari, dan dibersihkan bila sudah selesai.
+Program menandai tugas yang sudah lewat tenggat dan menampilkan
+ringkasan jumlah tugas aktif, selesai, dan terlambat.
+
+```bash
+cd day-15
+python3 todo.py
+python3 todo.py tambah "Beli tiket kereta" --prioritas tinggi --tenggat 2026-11-20 --tag perjalanan
+python3 todo.py daftar
+python3 todo.py daftar --status aktif
+python3 todo.py selesai 1
+python3 todo.py edit 2 --prioritas rendah
+python3 todo.py cari kereta
+python3 todo.py ringkasan
+python3 todo.py hapus 3 --ya
+python3 todo.py bersihkan --ya
+```
+
+Jalankan tanpa argumen untuk mode interaktif (menu angka). Prioritas
+ada tiga tingkat: tinggi, sedang (default), dan rendah. Tugas
+disimpan di `todo.json` pada folder tempat program dijalankan; berkas
+data itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada
+di `day-15/README.md`.
