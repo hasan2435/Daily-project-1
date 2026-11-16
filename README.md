@@ -29,6 +29,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 15 — Daftar Tugas (To-Do List): catat tugas dengan prioritas, tenggat, tag, dan catatan; tandai selesai dan pantau tugas yang terlambat (`day-15/todo.py`).
 
+- Day 16 — Pencatat Buku Bacaan: catat buku yang dibaca, pantau progres halaman, tandai selesai, dan lihat statistik bacaan (`day-16/buku.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -329,3 +331,30 @@ ada tiga tingkat: tinggi, sedang (default), dan rendah. Tugas
 disimpan di `todo.json` pada folder tempat program dijalankan; berkas
 data itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada
 di `day-15/README.md`.
+
+## Day 16 — Pencatat Buku Bacaan
+
+Proyek harian ke-16: pencatat buku bacaan di terminal. Tambah buku
+dengan judul, penulis, total halaman, dan genre; catat halaman yang
+sudah dibaca setiap hari; pantau progres tiap buku dengan bar progres;
+tandai buku selesai; dan lihat statistik bacaan — total buku, halaman
+yang sudah dibaca, rata-rata halaman buku selesai, dan genre terbanyak.
+
+```bash
+cd day-16
+python3 buku.py
+python3 buku.py tambah "Laskar Pelangi" "Andrea Hirata" 529 --genre novel
+python3 buku.py baca 1 120
+python3 buku.py daftar
+python3 buku.py daftar --status aktif
+python3 buku.py selesai 1
+python3 buku.py statistik
+python3 buku.py hapus 2 --ya
+```
+
+Jalankan tanpa argumen untuk mode interaktif (menu angka). Perintah
+`baca` menambah halaman yang dibaca; begitu mencapai total halaman,
+buku otomatis ditandai selesai beserta tanggalnya. Buku disimpan di
+`buku.json` pada folder tempat program dijalankan; berkas data itu
+milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
+`day-16/README.md`.
