@@ -31,6 +31,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 16 — Pencatat Buku Bacaan: catat buku yang dibaca, pantau progres halaman, tandai selesai, dan lihat statistik bacaan (`day-16/buku.py`).
 
+- Day 17 — Kalkulator Pajak Penghasilan (PPh 21): hitung PPh 21 tahunan dan bulanan karyawan dari gaji, tunjangan, dan bonus, lengkap dengan PTKP, biaya jabatan, dan tarif progresif (`day-17/pajak.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -358,3 +360,24 @@ buku otomatis ditandai selesai beserta tanggalnya. Buku disimpan di
 `buku.json` pada folder tempat program dijalankan; berkas data itu
 milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
 `day-16/README.md`.
+
+## Day 17 — Kalkulator Pajak Penghasilan (PPh 21)
+
+Proyek harian ke-17: kalkulator PPh 21 karyawan di terminal. Hitung
+pajak dari gaji pokok, tunjangan tetap, dan bonus/THR; lengkap dengan
+biaya jabatan, iuran pensiun, PTKP sesuai status, dan tarif progresif
+Pasal 17, beserta gaji bersih yang diterima tiap bulan.
+
+```bash
+cd day-17
+python3 pajak.py
+python3 pajak.py cepat 10000000
+python3 pajak.py cepat 20000000 --status K/1 --bonus 20000000
+python3 pajak.py cepat 10000000 --tanpa-npwp
+python3 pajak.py ptkp
+python3 pajak.py tarif
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Tarif dan PTKP
+mengikuti UU HPP; cek aturan terbaru sebelum dipakai untuk pelaporan.
+Detail lengkap ada di `day-17/README.md`.
