@@ -33,6 +33,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 17 — Kalkulator Pajak Penghasilan (PPh 21): hitung PPh 21 tahunan dan bulanan karyawan dari gaji, tunjangan, dan bonus, lengkap dengan PTKP, biaya jabatan, dan tarif progresif (`day-17/pajak.py`).
 
+- Day 18 — Kalkulator Cicilan Kredit: hitung cicilan bulanan pinjaman (anuitas), tabel amortisasi, simulasi pelunasan dipercepat, dan bandingkan dua penawaran kredit (`day-18/cicilan.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -381,3 +383,27 @@ python3 pajak.py tarif
 Jalankan tanpa argumen untuk mode interaktif. Tarif dan PTKP
 mengikuti UU HPP; cek aturan terbaru sebelum dipakai untuk pelaporan.
 Detail lengkap ada di `day-17/README.md`.
+
+## Day 18 — Kalkulator Cicilan Kredit
+
+Proyek harian ke-18: kalkulator cicilan kredit (KPR, kredit kendaraan,
+pinjaman pribadi) di terminal. Hitung cicilan bulanan tetap dengan
+sistem anuitas (bunga efektif), lihat tabel amortisasi, simulasikan
+pelunasan dipercepat dengan setoran ekstra, bandingkan dua penawaran
+kredit, dan bandingkan bunga flat dengan anuitas.
+
+```bash
+cd day-18
+python3 cicilan.py
+python3 cicilan.py hitung 100000000 12 12
+python3 cicilan.py tabel 100000000 12 12
+python3 cicilan.py lunas 100000000 12 12 2000000
+python3 cicilan.py banding 100000000 10 12 12 24
+python3 cicilan.py flat 100000000 12 12
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Pinjaman Rp100 jt,
+bunga 12%/tahun, tenor 12 bulan: cicilan Rp8.884.879/bulan, total
+bunga Rp6.618.546; tambah setoran Rp2 jt/bulan, lunas 2 bulan lebih
+cepat dan hemat bunga Rp1.187.461. Detail lengkap ada di
+`day-18/README.md`.
