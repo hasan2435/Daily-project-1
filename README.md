@@ -35,6 +35,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 18 — Kalkulator Cicilan Kredit: hitung cicilan bulanan pinjaman (anuitas), tabel amortisasi, simulasi pelunasan dipercepat, dan bandingkan dua penawaran kredit (`day-18/cicilan.py`).
 
+- Day 19 — Kalkulator Zakat: hitung zakat penghasilan, zakat mal (emas, perak, tabungan, dagang), dan zakat fitrah, lengkap dengan nisab (`day-19/zakat.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -407,3 +409,30 @@ bunga 12%/tahun, tenor 12 bulan: cicilan Rp8.884.879/bulan, total
 bunga Rp6.618.546; tambah setoran Rp2 jt/bulan, lunas 2 bulan lebih
 cepat dan hemat bunga Rp1.187.461. Detail lengkap ada di
 `day-18/README.md`.
+
+## Day 19 — Kalkulator Zakat
+
+Proyek harian ke-19: kalkulator zakat di terminal. Hitung zakat
+penghasilan bulanan dari gaji, zakat mal dari total harta (emas,
+perak, tabungan, atau dagang) yang sudah mencapai nisab dan haul
+satu tahun, serta zakat fitrah 2,5 kg beras per jiwa. Nisab dihitung
+dari harga emas per gram yang bisa diubah lewat opsi `--harga-emas`.
+
+```bash
+cd day-19
+python3 zakat.py
+python3 zakat.py penghasilan 12000000
+python3 zakat.py penghasilan 15000000 --harga-emas 1600000
+python3 zakat.py mal 200000000
+python3 zakat.py emas 100
+python3 zakat.py perak 700
+python3 zakat.py fitrah 4
+python3 zakat.py fitrah 4 --harga-beras 16000
+python3 zakat.py nisab
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Zakat penghasilan dan
+zakat mal sebesar 2,5% bila sudah mencapai nisab (85 gram emas);
+zakat fitrah 2,5 kg beras per jiwa. Harga emas default
+Rp1.500.000/gram dan harga beras default Rp15.000/kg — ubah sesuai
+harga saat ini. Detail lengkap ada di `day-19/README.md`.
