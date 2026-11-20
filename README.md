@@ -37,6 +37,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 19 — Kalkulator Zakat: hitung zakat penghasilan, zakat mal (emas, perak, tabungan, dagang), dan zakat fitrah, lengkap dengan nisab (`day-19/zakat.py`).
 
+- Day 20 — Kalkulator Diskon & Promo Belanja: hitung harga akhir belanja — diskon persen, diskon bertingkat, potongan nominal, PPN, cashback, dan banding dua promo (`day-20/diskon.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -436,3 +438,25 @@ zakat mal sebesar 2,5% bila sudah mencapai nisab (85 gram emas);
 zakat fitrah 2,5 kg beras per jiwa. Harga emas default
 Rp1.500.000/gram dan harga beras default Rp15.000/kg — ubah sesuai
 harga saat ini. Detail lengkap ada di `day-19/README.md`.
+
+## Day 20 — Kalkulator Diskon & Promo Belanja
+
+Proyek harian ke-20: program terminal untuk menghitung harga akhir
+belanja — diskon persen tunggal, diskon bertingkat, potongan nominal,
+total bayar dengan PPN dan cashback, sampai membandingkan dua promo.
+
+```bash
+cd day-20
+python3 diskon.py
+python3 diskon.py diskon 250000 30
+python3 diskon.py bertingkat 250000 50 20
+python3 diskon.py potong 250000 50000
+python3 diskon.py total 250000 --diskon 30 --ppn 11 --cashback 10000
+python3 diskon.py banding 250000 "30%" "50%+20%"
+python3 diskon.py hemat 250000 30
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Diskon bertingkat
+dihitung tahap demi tahap: harga Rp250.000 diskon 50% lalu 20%
+menjadi Rp100.000, bukan Rp75.000. Promo bisa digabung, misal
+`"20%+50000"`. Detail lengkap ada di `day-20/README.md`.
