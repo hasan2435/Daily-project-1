@@ -39,6 +39,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 20 — Kalkulator Diskon & Promo Belanja: hitung harga akhir belanja — diskon persen, diskon bertingkat, potongan nominal, PPN, cashback, dan banding dua promo (`day-20/diskon.py`).
 
+- Day 21 — Permainan Sudoku di Terminal: buat teka-teki Sudoku baru dengan solusi unik, mainkan di terminal, atau selesaikan teka-teki dari luar (`day-21/sudoku.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -460,3 +462,22 @@ Jalankan tanpa argumen untuk mode interaktif. Diskon bertingkat
 dihitung tahap demi tahap: harga Rp250.000 diskon 50% lalu 20%
 menjadi Rp100.000, bukan Rp75.000. Promo bisa digabung, misal
 `"20%+50000"`. Detail lengkap ada di `day-20/README.md`.
+## Day 21 — Permainan Sudoku di Terminal
+
+Proyek harian ke-21: permainan Sudoku di terminal. Buat teka-teki
+baru yang dijamin punya tepat satu solusi, mainkan langsung dengan
+petunjuk dan batas kesalahan, atau selesaikan teka-teki dari luar.
+
+```bash
+cd day-21
+python3 sudoku.py
+python3 sudoku.py main --kesulitan sedang
+python3 sudoku.py buat --kesulitan sulit
+python3 sudoku.py buat --kesulitan mudah --solusi
+python3 sudoku.py selesaikan 530070000600195000098000060800060003400803001700020006060000280000419005000080079
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Ada tiga tingkat
+kesulitan (mudah 36 petunjuk, sedang 30, sulit 25), maksimal 3
+petunjuk dan 3 kali salah isi per permainan. Detail lengkap ada di
+`day-21/README.md`.
