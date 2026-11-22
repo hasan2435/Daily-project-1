@@ -41,6 +41,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 21 — Permainan Sudoku di Terminal: buat teka-teki Sudoku baru dengan solusi unik, mainkan di terminal, atau selesaikan teka-teki dari luar (`day-21/sudoku.py`).
 
+- Day 22 — Pencatat Utang & Piutang: catat utang dan piutang per orang, bayar bertahap sampai lunas, pantau jatuh tempo, dan lihat posisi bersih (`day-22/utang.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -481,3 +483,27 @@ Jalankan tanpa argumen untuk mode interaktif. Ada tiga tingkat
 kesulitan (mudah 36 petunjuk, sedang 30, sulit 25), maksimal 3
 petunjuk dan 3 kali salah isi per permainan. Detail lengkap ada di
 `day-21/README.md`.
+
+## Day 22 — Pencatat Utang & Piutang
+
+Proyek harian ke-22: pencatat utang dan piutang di terminal. Catat
+utang (kita berutang) dan piutang (orang berutang ke kita) per orang
+dengan tanggal jatuh tempo, bayar atau terima pembayaran secara
+bertahap sampai lunas, dan pantau mana yang sudah lewat jatuh tempo.
+
+```bash
+cd day-22
+python3 utang.py
+python3 utang.py tambah utang Budi 500000 --jatuh-tempo 2026-12-22
+python3 utang.py tambah piutang Ani 250000 --catatan "Talang tiket"
+python3 utang.py daftar
+python3 utang.py bayar 1 200000
+python3 utang.py total
+python3 utang.py jatuh-tempo
+python3 utang.py detail 1
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Data disimpan di
+`utang.json` pada folder tempat program dijalankan; berkas data itu
+milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
+`day-22/README.md`.
