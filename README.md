@@ -43,6 +43,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 22 — Pencatat Utang & Piutang: catat utang dan piutang per orang, bayar bertahap sampai lunas, pantau jatuh tempo, dan lihat posisi bersih (`day-22/utang.py`).
 
+- Day 23 — Kalkulator Biaya Listrik: hitung biaya listrik per alat dan tagihan bulanan dari golongan tarif PLN, lengkap dengan rekening minimum dan simulasi hemat (`day-23/listrik.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -507,3 +509,33 @@ Jalankan tanpa argumen untuk mode interaktif. Data disimpan di
 `utang.json` pada folder tempat program dijalankan; berkas data itu
 milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
 `day-22/README.md`.
+
+## Day 23 — Kalkulator Biaya Listrik
+
+Proyek harian ke-23: kalkulator biaya listrik di terminal. Catat
+alat-alat di rumah beserta daya dan jam nyalanya, lalu hitung
+berapa kWh dan rupiah yang dihabiskan tiap alat dan berapa
+perkiraan tagihan bulanannya dari golongan tarif rumah tangga
+PLN, lengkap dengan rekening minimum pascabayar dan simulasi
+hemat bila jam nyala dikurangi.
+
+```bash
+cd day-23
+python3 listrik.py
+python3 listrik.py golongan
+python3 listrik.py hitung 150 24
+python3 listrik.py tambah "Kulkas" 150 24
+python3 listrik.py tambah "AC 1 PK" 800 8
+python3 listrik.py daftar --golongan 1300
+python3 listrik.py total
+python3 listrik.py total --golongan 2200 --ppj 5
+python3 listrik.py total --token
+python3 listrik.py hemat 2 4
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Contoh: kulkas
+150 watt nyala 24 jam sehari menghabiskan 108 kWh/bulan, sekitar
+Rp156.028/bulan pada golongan 1300 VA. Data disimpan di
+`listrik.json` pada folder tempat program dijalankan; berkas data
+itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada
+di `day-23/README.md`.
