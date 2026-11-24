@@ -45,6 +45,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 23 — Kalkulator Biaya Listrik: hitung biaya listrik per alat dan tagihan bulanan dari golongan tarif PLN, lengkap dengan rekening minimum dan simulasi hemat (`day-23/listrik.py`).
 
+- Day 24 — Kalkulator HPP & Harga Jual: hitung HPP per unit usaha kecil, tentukan harga jual dari margin, titik impas (BEP), dan laba bulanan (`day-24/hpp.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -539,3 +541,33 @@ Rp156.028/bulan pada golongan 1300 VA. Data disimpan di
 `listrik.json` pada folder tempat program dijalankan; berkas data
 itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada
 di `day-23/README.md`.
+
+## Day 24 — Kalkulator HPP & Harga Jual
+
+Proyek harian ke-24: kalkulator harga pokok produksi (HPP) dan
+harga jual untuk usaha kecil di terminal. Catat produk beserta
+biaya bahan baku, tenaga kerja, dan overhead per unit, lalu
+hitung HPP, tentukan harga jual dari margin keuntungan,
+cari titik impas (BEP) dalam unit dan rupiah, dan perkirakan
+laba bulanan pada target penjualan.
+
+```bash
+cd day-24
+python3 hpp.py
+python3 hpp.py cepat 5000 2000 1000 --margin 30
+python3 hpp.py tambah "Kopi Gula Aren" 5000 2000 1000 --tetap 1500000 --target 300
+python3 hpp.py daftar
+python3 hpp.py hpp 1
+python3 hpp.py bep 1
+python3 hpp.py laba 1 300
+python3 hpp.py banding 1 12000 15000 --unit 300
+python3 hpp.py jual 1 15000
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Contoh: Kopi Gula
+Aren dengan bahan Rp5.000, tenaga kerja Rp2.000, dan overhead
+Rp1.000 per gelas punya HPP Rp8.000; dengan margin 30% harga
+jualnya Rp10.400. Bila biaya tetap Rp1.500.000/bulan, BEP-nya
+625 gelas/bulan. Data disimpan di `hpp.json` pada folder tempat
+program dijalankan; berkas data itu milik pengguna, bukan
+bagian dari proyek. Detail lengkap ada di `day-24/README.md`.
