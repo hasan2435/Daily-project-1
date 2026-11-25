@@ -47,6 +47,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 24 — Kalkulator HPP & Harga Jual: hitung HPP per unit usaha kecil, tentukan harga jual dari margin, titik impas (BEP), dan laba bulanan (`day-24/hpp.py`).
 
+- Day 25 — Pencatat Perawatan Kendaraan: catat kendaraan dan riwayat servisnya, pantau biaya perawatan, dan dapatkan pengingat servis serta pajak STNK (`day-25/kendaraan.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -571,3 +573,30 @@ jualnya Rp10.400. Bila biaya tetap Rp1.500.000/bulan, BEP-nya
 625 gelas/bulan. Data disimpan di `hpp.json` pada folder tempat
 program dijalankan; berkas data itu milik pengguna, bukan
 bagian dari proyek. Detail lengkap ada di `day-24/README.md`.
+
+## Day 25 — Pencatat Perawatan Kendaraan
+
+Proyek harian ke-25: pencatat perawatan kendaraan di terminal.
+Catat motor atau mobil beserta riwayat servisnya — ganti oli, ganti
+ban, servis rem — lengkap dengan biaya, kilometer saat servis, dan
+jadwal servis berikutnya. Program mengingatkan servis yang sudah
+jatuh tempo (kilometer atau tanggal berikutnya tercapai) dan pajak
+STNK tahunan yang tinggal 30 hari lagi.
+
+```bash
+cd day-25
+python3 kendaraan.py
+python3 kendaraan.py tambah "Beat" motor "B 1234 ABC" 2020 --km 15000 --pajak 2027-03-15
+python3 kendaraan.py servis 1 "Ganti oli" 85000 --km 15500 --berikutnya-km 17500
+python3 kendaraan.py riwayat 1
+python3 kendaraan.py ingat
+python3 kendaraan.py total
+python3 kendaraan.py pajak 1 2027-03-15
+python3 kendaraan.py km 1 16000
+```
+
+Jalankan tanpa argumen untuk mode interaktif. Servis dianggap segera
+bila kilometer berikutnya tinggal 500 km lagi atau tanggalnya
+tinggal 30 hari lagi. Data disimpan di `kendaraan.json` pada folder
+tempat program dijalankan; berkas data itu milik pengguna, bukan
+bagian dari proyek. Detail lengkap ada di `day-25/README.md`.
