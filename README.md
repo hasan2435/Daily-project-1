@@ -49,6 +49,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 25 — Pencatat Perawatan Kendaraan: catat kendaraan dan riwayat servisnya, pantau biaya perawatan, dan dapatkan pengingat servis serta pajak STNK (`day-25/kendaraan.py`).
 
+- Day 26 — Permainan Batu Gunting Kertas: main batu gunting kertas melawan komputer, pertandingan best of 3/5/7, ronde cepat, statistik dan riwayat tersimpan (`day-26/suit.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -600,3 +602,32 @@ bila kilometer berikutnya tinggal 500 km lagi atau tanggalnya
 tinggal 30 hari lagi. Data disimpan di `kendaraan.json` pada folder
 tempat program dijalankan; berkas data itu milik pengguna, bukan
 bagian dari proyek. Detail lengkap ada di `day-25/README.md`.
+
+## Day 26 — Permainan Batu Gunting Kertas
+
+Proyek harian ke-26: permainan batu gunting kertas melawan komputer
+di terminal. Pilih batu, gunting, atau kertas; komputer memilih secara
+acak. Aturan klasiknya: batu mengalahkan gunting, gunting mengalahkan
+kertas, kertas mengalahkan batu, dan pilihan yang sama berarti seri.
+
+```bash
+cd day-26
+python3 suit.py
+python3 suit.py main --ronde 5
+python3 suit.py main --ronde 3
+python3 suit.py cepat batu
+python3 suit.py statistik
+python3 suit.py riwayat
+python3 suit.py riwayat --jumlah 5
+python3 suit.py --daftar
+python3 suit.py reset --ya
+```
+
+Jalankan tanpa argumen untuk mode interaktif (menu angka): pertandingan
+best of 5 atau best of 3, ronde cepat, mode tanpa batas, statistik,
+atau riwayat. Jumlah ronde pertandingan harus bilangan ganjil.
+Statistik (menang, kalah, seri, win rate, streak, dan pilihan yang
+paling sering dipakai) serta riwayat 50 pertandingan terakhir
+disimpan di `suit.json` pada folder tempat program dijalankan; berkas
+data itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada
+di `day-26/README.md`.
