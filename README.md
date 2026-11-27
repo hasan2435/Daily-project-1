@@ -51,6 +51,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 26 — Permainan Batu Gunting Kertas: main batu gunting kertas melawan komputer, pertandingan best of 3/5/7, ronde cepat, statistik dan riwayat tersimpan (`day-26/suit.py`).
 
+- Day 27 — Permainan Ular Tangga: main ular tangga 2-4 pemain melawan manusia atau komputer, papan 10x10 dengan 7 tangga dan 7 ular, statistik dan riwayat tersimpan (`day-27/ular_tangga.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -631,3 +633,34 @@ paling sering dipakai) serta riwayat 50 pertandingan terakhir
 disimpan di `suit.json` pada folder tempat program dijalankan; berkas
 data itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada
 di `day-26/README.md`.
+
+## Day 27 — Permainan Ular Tangga
+
+Proyek harian ke-27: permainan ular tangga di terminal untuk 2-4
+pemain, manusia melawan manusia atau melawan komputer. Papan 10x10
+berisi 7 tangga dan 7 ular; yang pertama mendarat tepat di kotak
+100 menang. Mendarat di kaki tangga berarti naik, mendarat di kepala
+ular berarti turun. Angka 6 mendapat lemparan lagi, tapi tiga kali
+angka 6 berturut-turut membuat giliran hangus.
+
+```bash
+cd day-27
+python3 ular_tangga.py
+python3 ular_tangga.py main --pemain "Ani,Budi" --komputer 1
+python3 ular_tangga.py demo
+python3 ular_tangga.py demo --pemain 3
+python3 ular_tangga.py papan
+python3 ular_tangga.py statistik
+python3 ular_tangga.py riwayat
+python3 ular_tangga.py --daftar
+python3 ular_tangga.py reset --ya
+```
+
+Jalankan tanpa argumen untuk mode interaktif (menu angka): main baru,
+demo komputer melawan komputer, lihat papan, statistik, riwayat, atau
+daftar ular dan tangga. Lemparan yang melewati kotak 100 tidak
+bergerak — harus mendarat tepat di 100. Statistik kemenangan tiap
+nama pemain dan riwayat 20 permainan terakhir disimpan di
+`ular_tangga.json` pada folder tempat program dijalankan; berkas data
+itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
+`day-27/README.md`.
