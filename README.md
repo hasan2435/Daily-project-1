@@ -53,6 +53,8 @@ Semua proyek memakai Python standar saja, tanpa library tambahan, dan bisa dijal
 
 - Day 27 — Permainan Ular Tangga: main ular tangga 2-4 pemain melawan manusia atau komputer, papan 10x10 dengan 7 tangga dan 7 ular, statistik dan riwayat tersimpan (`day-27/ular_tangga.py`).
 
+- Day 28 — Permainan Minesweeper di Terminal: cari semua bom tanpa meledak, 3 tingkat kesulitan, klik pertama selalu aman, statistik dan riwayat tersimpan (`day-28/minesweeper.py`).
+
 ## Day 1 — Pomodoro Timer
 
 Proyek harian ke-1: timer Pomodoro di terminal.
@@ -664,3 +666,38 @@ nama pemain dan riwayat 20 permainan terakhir disimpan di
 `ular_tangga.json` pada folder tempat program dijalankan; berkas data
 itu milik pengguna, bukan bagian dari proyek. Detail lengkap ada di
 `day-27/README.md`.
+
+## Day 28 — Permainan Minesweeper di Terminal
+
+Proyek harian ke-28: permainan Minesweeper di terminal. Buka kotak
+satu per satu, hindari bom, dan tandai kotak yang dicurigai berisi
+bom. Angka di kotak yang terbuka menunjukkan jumlah bom di delapan
+kotak sekitarnya. Buka kotak kosong dan semua kotak kosong di
+sekitarnya ikut terbuka otomatis.
+
+Klik pertama selalu aman — bom baru dipasang setelah kotak pertama
+dibuka, jadi tidak mungkin langsung kalah di langkah pertama.
+
+```bash
+cd day-28
+python3 minesweeper.py
+python3 minesweeper.py main --kesulitan sedang
+python3 minesweeper.py demo
+python3 minesweeper.py demo --kesulitan mudah --benih 7
+python3 minesweeper.py statistik
+python3 minesweeper.py riwayat
+python3 minesweeper.py --daftar
+python3 minesweeper.py reset --ya
+```
+
+Jalankan tanpa argumen untuk mode interaktif (menu angka): main baru,
+demo komputer bermain sendiri, statistik, riwayat, atau daftar
+tingkat kesulitan. Ada tiga tingkat kesulitan: mudah (9x9, 10 bom),
+sedang (16x16, 40 bom), dan sulit (16x30, 99 bom). Di dalam
+permainan ketik `buka 3 4` untuk membuka kotak baris 3 kolom 4,
+`tandai 3 4` untuk menandai/mencabut bendera, atau `keluar` untuk
+berhenti. Baris dan kolom dihitung mulai dari 1. Statistik (main,
+menang, win rate, dan waktu terbaik) serta riwayat 20 permainan
+terakhir disimpan di `minesweeper.json` pada folder tempat program
+dijalankan; berkas data itu milik pengguna, bukan bagian dari proyek.
+Detail lengkap ada di `day-28/README.md`.
